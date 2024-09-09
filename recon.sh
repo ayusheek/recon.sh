@@ -40,8 +40,6 @@ recon() {
     nuclei_dast_scan $output_dir/"katana.txt" $output_dir/"nuclei_dastScan_out.txt"
 }
 
-set -e
-
 if [[ $# -ne 2 ]]; then
     echo -e "\nUsage: $0 <domain> <ouptut_dir>\n"
     echo "Example:"
