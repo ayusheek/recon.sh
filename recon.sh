@@ -15,7 +15,7 @@ httpx_probe() {
 katana_crawl() {
     local live_hosts_file=$1
     local output_file=$2
-    scan_time=$(date +"%Y-%m-%d")
+    scan_time=$(date +"%Y-%m-%d-%H-%m-%S")
 
     mkdir -p ".cache/$scan_time"
 
