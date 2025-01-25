@@ -21,7 +21,7 @@ httpx_filter_dupe() {
 subdomain_takeover_scan() {
     local live_hosts_file=$1
     local output_file=$2
-    nuclei -t "http/takeovers/" -l "$live_hosts_file" -o "$output_file"
+    nuclei -t "http/takeovers/" -t $(pwd)/"custom-nuclei-templates/subdomain_takeover_templates/" -l "$live_hosts_file" -o "$output_file"
 }
 
 katana_crawl() {
